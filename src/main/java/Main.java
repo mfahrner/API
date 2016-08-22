@@ -36,5 +36,13 @@ public class Main {
         before((request, response) -> response.header("Access-Control-Allow-Origin", "*"));
 
         get("/hello", (req, res) -> "Hello World");
+
+        get("/api", (request, response) -> gson.toJson(movies));
+
+        post("/api", (req, res) -> {
+            movies.add(gson.fromJson(req.body(), Movie.class));
+
+            return 200;
+        });
     }
 }

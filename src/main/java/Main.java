@@ -23,6 +23,16 @@ public class Main {
 
 
     public static void main(String[] args) {
+
+        String test = System.getenv("PORT");
+
+        if (test != null) {
+            port(Integer.valueOf(test));
+        } else {
+            port(5000);
+        }
+        staticFileLocation("/public");
+
         get("/hello", (req, res) -> "Hello World");
     }
 }

@@ -33,6 +33,8 @@ public class Main {
         }
         staticFileLocation("/public");
 
+        before((request, response) -> response.header("Access-Control-Allow-Origin", "*"));
+
         get("/hello", (req, res) -> "Hello World");
     }
 }

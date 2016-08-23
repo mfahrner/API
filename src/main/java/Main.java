@@ -27,7 +27,7 @@ public class Main {
 
         before((request, response) -> response.header("Access-Control-Allow-Origin", "*"));
 
-        get("/", (req, res) -> "Hello World");
+        get("/", (req, res) -> "Welcome To Mike's Super Awesome Webpage");
 
         get("/api", (request, response) -> gson.toJson(movies));
 

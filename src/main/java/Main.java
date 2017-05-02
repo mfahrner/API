@@ -1,8 +1,6 @@
 /**
  * Created by mfahrner on 8/22/16.
  */
-
-
 import java.util.ArrayList;
 import static spark.Spark.*;
 import com.google.gson.Gson;
